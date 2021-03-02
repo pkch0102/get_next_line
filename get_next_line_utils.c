@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mihykim <mihykim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: kicpark <emmet.urssu@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/02 16:06:58 by mihykim           #+#    #+#             */
-/*   Updated: 2020/04/10 10:26:02 by mihykim          ###   ########.fr       */
+/*   Created: 2021/03/02 10:33:48 by kicpark           #+#    #+#             */
+/*   Updated: 2021/03/02 10:33:48 by kicpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "get_next_line_bonus.h"
 
 char	*ft_strchr(char *s, int c)
 {
