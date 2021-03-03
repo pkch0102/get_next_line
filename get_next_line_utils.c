@@ -12,7 +12,7 @@
 
 char	*ft_strchr(char *s, int c)
 {
-	size_t i;
+	int i;
 
 	if (s == 0)
 		return (0);
@@ -28,9 +28,9 @@ char	*ft_strchr(char *s, int c)
 	return (0);
 }
 
-size_t	ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-	size_t i;
+	int i;
 
 	i = 0;
 	while (s[i])
@@ -38,9 +38,9 @@ size_t	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_strcpy(char *dst, char *src, size_t n)
+char	*ft_strcpy(char *dst, char *src, int n)
 {
-	size_t i;
+	int i;
 
 	if (dst == 0 && src == 0)
 		return (dst);
@@ -53,7 +53,7 @@ char	*ft_strcpy(char *dst, char *src, size_t n)
 	return (dst);
 }
 
-char	*ft_strndup(char *s1, size_t size)
+char	*ft_strndup(char *s1, int size)
 {
 	char	*dup;
 
@@ -68,8 +68,8 @@ char	*ft_strndup(char *s1, size_t size)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*new_s;
-	size_t	len1;
-	size_t	len2;
+	int	len1;
+	int	len2;
 
 	if (s1 == 0 && s2 == 0)
 		return (0);
