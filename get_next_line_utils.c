@@ -14,7 +14,7 @@
 
 char	*ft_strchr(char *s, int c)
 {
-	int i;
+	int		i;
 
 	if (s == 0)
 		return (0);
@@ -30,9 +30,9 @@ char	*ft_strchr(char *s, int c)
 	return (0);
 }
 
-int	ft_strlen(char *s)
+int		ft_strlen(char *s)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (s[i])
@@ -42,7 +42,7 @@ int	ft_strlen(char *s)
 
 char	*ft_strcpy(char *dst, char *src, int n)
 {
-	int i;
+	int		i;
 
 	if (dst == 0 && src == 0)
 		return (dst);
