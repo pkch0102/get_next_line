@@ -70,8 +70,8 @@ char	*ft_strndup(char *s1, int size)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*new_s;
-	int	len1;
-	int	len2;
+	size_t	len1;
+	size_t	len2;
 
 	if (s1 == 0 && s2 == 0)
 		return (0);
