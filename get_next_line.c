@@ -29,7 +29,7 @@ static int	handle_line(char **line, char **res, char *tmp_line)
 		tmp = ft_strndup(tmp_line + 1, ft_strlen(tmp_line + 1));
 		free(*res);
 		*res = tmp;
-		return (CON);
+		return (1);
 	}
 	if (*res != NULL)
 	{
@@ -38,7 +38,7 @@ static int	handle_line(char **line, char **res, char *tmp_line)
 	}
 	else
 		*line = ft_strndup("", 1);
-	return (_EOF);
+	return (0);
 }
 
 int			get_next_line(int fd, char **line)
@@ -50,7 +50,7 @@ int			get_next_line(int fd, char **line)
 	char		*tmp_line;
 
 	if (fd < 0 || line == NULL || BUFFER_SIZE <= 0)
-		return (ERROR);
+		return (-1);
 	while ((tmp_line = ft_strchr(res[fd], '\n')) == 0
 			&& (byte = read(fd, buff, BUFFER_SIZE)) > 0)
 	{
@@ -62,6 +62,6 @@ int			get_next_line(int fd, char **line)
 		res[fd] = tmp;
 	}
 	if (byte < 0)
-		return (ERROR);
+		return (-1);
 	return (handle_line(line, &res[fd], tmp_line));
 }

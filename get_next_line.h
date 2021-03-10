@@ -22,10 +22,6 @@
 #  define BUFFER_SIZE 10
 # endif
 
-# define NL 1
-# define _EOF 0
-# define ERROR -1
-
 int		get_next_line(int fd, char **line);
 
 char	*ft_strchr(char *s, int c);
