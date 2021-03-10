@@ -12,14 +12,7 @@
 
 #include "get_next_line.h"
 
-/*
-** - Read the text available on a file descriptor, one line without newline.
-** - Read file only once.
-** - Do not read whole file and then process each line.
-** - Try to read as little as possible each time get_next_line is called.
-*/
-
-static int	handle_line(char **line, char **res, char *tmp_line)
+static int	func(char **line, char **res, char *tmp_line)
 {
 	char	*tmp;
 
@@ -63,5 +56,5 @@ int			get_next_line(int fd, char **line)
 	}
 	if (byte < 0)
 		return (-1);
-	return (handle_line(line, &res[fd], tmp_line));
+	return (func(line, &res[fd], tmp_line));
 }
