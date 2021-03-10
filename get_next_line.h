@@ -30,7 +30,7 @@ int		get_next_line(int fd, char **line);
 
 char	*ft_strchr(char *s, int c);
 int		ft_strlen(char *c);
-char	*ft_strcpy(char	*dst, char *stc, int n);
+char	*ft_strcpy(char	*dst, char *src, int n);
 char	*ft_strndup(char *s1, int size);
 char	*ft_strjoin(char *s1, char *s2);
 

@@ -55,21 +55,9 @@ char	*ft_strcpy(char *dst, char *src, int n)
 	return (dst);
 }
 
-char	*ft_strndup(char *s1, int size)
-{
-	char	*dup;
-
-	dup = (char *)malloc(sizeof(char) * (size + 1));
-	if (dup == 0)
-		return (0);
-	ft_strcpy(dup, s1, size);
-	dup[size] = 0;
-	return (dup);
-}
-
 char	*ft_strjoin(char *s1, char *s2)
 {
-	char	*new_s;
+	char	*res;
 	size_t	len1;
 	size_t	len2;
 
@@ -77,11 +65,23 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (0);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	new_s = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
-	if (new_s == 0)
+	res = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	if (res == 0)
 		return (0);
-	ft_strcpy(new_s, s1, len1);
-	ft_strcpy(new_s + len1, s2, len2);
-	new_s[len1 + len2] = 0;
-	return (new_s);
+	ft_strcpy(res, s1, len1);
+	ft_strcpy(res + len1, s2, len2);
+	res[len1 + len2] = 0;
+	return (res);
+}
+
+char	*ft_strndup(char *s1, int size)
+{
+	char	*res;
+
+	res = (char *)malloc(sizeof(char) * (size + 1));
+	if (res == 0)
+		return (0);
+	ft_strcpy(res, s1, size);
+	res[size] = 0;
+	return (res);
 }
